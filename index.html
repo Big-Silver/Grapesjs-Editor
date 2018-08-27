@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>GrapesJS Builder</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/grapes.min.css">
+    <link rel="stylesheet" href="stylesheets/toastr.min.css">
+    <link rel="stylesheet" href="stylesheets/grapesjs-preset-webpage.min.css">
+    <link rel="stylesheet" href="stylesheets/tooltip.css">
+    <link rel="stylesheet" href="stylesheets/grapesjs-plugin-filestack.css">
+    <link rel="stylesheet" href="stylesheets/demos.css">
+    <link rel="stylesheet" href="stylesheets/codemirror.css">
+    <link rel="stylesheet" href="codemirror/addon/hint/show-hint.css">
+    <link rel="stylesheet" href="codemirror/theme/3024-day.css">
+    <link rel="stylesheet" href="codemirror/theme/3024-night.css">
+    <link rel="stylesheet" href="codemirror/theme/abcdef.css">
+    <link rel="stylesheet" href="codemirror/theme/ambiance.css">
+    <link rel="stylesheet" href="codemirror/theme/base16-dark.css">
+    <link rel="stylesheet" href="codemirror/theme/bespin.css">
+    <link rel="stylesheet" href="codemirror/theme/base16-light.css">
+    <link rel="stylesheet" href="codemirror/theme/blackboard.css">
+    <link rel="stylesheet" href="codemirror/theme/cobalt.css">
+    <link rel="stylesheet" href="codemirror/theme/colorforth.css">
+    <link rel="stylesheet" href="codemirror/theme/dracula.css">
+    <link rel="stylesheet" href="codemirror/theme/duotone-dark.css">
+    <link rel="stylesheet" href="codemirror/theme/duotone-light.css">
+    <link rel="stylesheet" href="codemirror/theme/eclipse.css">
+    <link rel="stylesheet" href="codemirror/theme/elegant.css">
+    <link rel="stylesheet" href="codemirror/theme/erlang-dark.css">
+    <link rel="stylesheet" href="codemirror/theme/gruvbox-dark.css">
+    <link rel="stylesheet" href="codemirror/theme/hopscotch.css">
+    <link rel="stylesheet" href="codemirror/theme/icecoder.css">
+    <link rel="stylesheet" href="codemirror/theme/isotope.css">
+    <link rel="stylesheet" href="codemirror/theme/lesser-dark.css">
+    <link rel="stylesheet" href="codemirror/theme/liquibyte.css">
+    <link rel="stylesheet" href="codemirror/theme/lucario.css">
+    <link rel="stylesheet" href="codemirror/theme/material.css">
+    <link rel="stylesheet" href="codemirror/theme/mbo.css">
+    <link rel="stylesheet" href="codemirror/theme/mdn-like.css">
+    <link rel="stylesheet" href="codemirror/theme/midnight.css">
+    <link rel="stylesheet" href="codemirror/theme/monokai.css">
+    <link rel="stylesheet" href="codemirror/theme/neat.css">
+    <link rel="stylesheet" href="codemirror/theme/neo.css">
+    <link rel="stylesheet" href="codemirror/theme/night.css">
+    <link rel="stylesheet" href="codemirror/theme/oceanic-next.css">
+    <link rel="stylesheet" href="codemirror/theme/panda-syntax.css">
+    <link rel="stylesheet" href="codemirror/theme/paraiso-dark.css">
+    <link rel="stylesheet" href="codemirror/theme/paraiso-light.css">
+    <link rel="stylesheet" href="codemirror/theme/pastel-on-dark.css">
+    <link rel="stylesheet" href="codemirror/theme/railscasts.css">
+    <link rel="stylesheet" href="codemirror/theme/rubyblue.css">
+    <link rel="stylesheet" href="codemirror/theme/seti.css">
+    <link rel="stylesheet" href="codemirror/theme/shadowfox.css">
+    <link rel="stylesheet" href="codemirror/theme/solarized.css">
+    <link rel="stylesheet" href="codemirror/theme/the-matrix.css">
+    <link rel="stylesheet" href="codemirror/theme/tomorrow-night-bright.css">
+    <link rel="stylesheet" href="codemirror/theme/tomorrow-night-eighties.css">
+    <link rel="stylesheet" href="codemirror/theme/ttcn.css">
+    <link rel="stylesheet" href="codemirror/theme/twilight.css">
+    <link rel="stylesheet" href="codemirror/theme/vibrant-ink.css">
+    <link rel="stylesheet" href="codemirror/theme/xq-dark.css">
+    <link rel="stylesheet" href="codemirror/theme/xq-light.css">
+    <link rel="stylesheet" href="codemirror/theme/yeti.css">
+    <link rel="stylesheet" href="codemirror/theme/idea.css">
+    <link rel="stylesheet" href="codemirror/theme/darcula.css">
+    <link rel="stylesheet" href="codemirror/theme/zenburn.css">
+    <link rel="stylesheet" href="stylesheets/style.css" type="text/css">
+</head>
+
+<body>
+    <div style="display: none">
+        <div class="gjs-logo-cont">
+            <a href="index.html">
+                <img class="gjs-logo" src="img/grapesjs-logo-cl.png">
+            </a>
+            <div class="gjs-logo-version"></div>
+        </div>
+    </div>
+
+    <div id="codemirror"></div>
+
+    <div class="panel__top">
+        <div class="panel__basic-actions"></div>
+    </div>
+
+    <div id="gjs"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.9.2/ckeditor.js"></script>
+    <script src="js/grapes.min.js"></script>
+    <script src="js/toastr.min.js"></script>
+    <script src="js/grapesjs-preset-webpage.min.js"></script>
+    <script src="js/grapesjs-lory-slider.min.js"></script>
+    <script src="js/grapesjs-tabs.min.js"></script>
+    <script src="js/grapesjs-custom-code.min.js"></script>
+    <script src="js/grapesjs-ckeditor.min.js"></script>
+    <script src="js/codemirror.js"></script>
+    <script src="codemirror/addon/hint/show-hint.js"></script>
+    <script src="codemirror/addon/hint/xml-hint.js"></script>
+    <script src="codemirror/addon/hint/html-hint.js"></script>
+    <script src="codemirror/addon/format/formatting.js"></script>
+    <script src="codemirror/mode/xml/xml.js"></script>
+    <script src="codemirror/mode/javascript/javascript.js"></script>
+    <script src="codemirror/mode/css/css.js"></script>
+    <script src="codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="codemirror/keymap/sublime.js"></script>
+    <script src="codemirror/keymap/vim.js"></script>
+    <script src="codemirror/keymap/emacs.js"></script>
+    <script src="js/filestack.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
